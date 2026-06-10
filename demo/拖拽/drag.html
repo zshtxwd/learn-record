@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            width: 200px;
+            height: 50px;
+            background-color: lightblue;
+            border-radius: 5px;
+            line-height: 50px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .item.moving {
+            border: 1px dotted black;
+            background-color: white;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        <div class="item" draggable="true">1</div>
+        <div class="item" draggable="true">2</div>
+        <div class="item" draggable="true">3</div>
+        <div class="item" draggable="true">4</div>
+        <div class="item" draggable="true">5</div>
+        <div class="item" draggable="true">6</div>
+        <div class="item" draggable="true">7</div>
+        <div class="item" draggable="true">8</div>
+    </div>
+
+    <script>
+        const list = document.querySelector(".list")
+
+        list.ondragstart = e => {
+            setTimeout(() => {
+                e.target.classList.add("moving")
+            }, 0)
+
+            currentNode = e.target
+        }
+
+        list.ondragenter = e => {
+            if (e.target === list || e.target === currentNode) {
+                return
+            }
+            console.log(e.target)
+            const arr = Array.from(list.children)
+            currentIndex = arr.indexOf(currentNode)
+            targetIndex = arr.indexOf(e.target)
+            if (currentIndex > targetIndex && targetIndex === 0) {
+                // 处理往上拖并插入到第一个项目前的情况
+                list.insertBefore(currentNode, list.firstChild);
+            } else if (currentIndex > targetIndex) {
+                // 处理往上拖并插入到非第一个项目前的情况
+                list.insertBefore(currentNode, e.target.nextElementSibling);
+            } else if (currentIndex < targetIndex && targetIndex === arr.length - 1) {
+                // 处理往下拖并插入到最后一个项目后的情况
+                list.appendChild(currentNode);
+            } else if (currentIndex < targetIndex) {
+                // 处理往下拖并插入到非最后一个项目后的情况
+                list.insertBefore(currentNode, e.target.nextElementSibling);
+            }
+
+        }
+
+        list.ondragend = e => {
+            e.target.classList.remove("moving")
+        }
+    </script>
+</body>
+
+</html>

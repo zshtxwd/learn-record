@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+.circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 100px auto;
+  position: relative;
+}
+.circle .dot {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  left: 240px;
+  transform-origin: center 260px;
+  perspective: 70px;
+  transform-style: preserve-3d;
+}
+.circle .dot:nth-child(1) {
+  transform: rotate(0deg);
+}
+.circle .dot:nth-child(1)::after, .circle .dot:nth-child(1)::before {
+  animation-delay: 0s;
+}
+.circle .dot:nth-child(2) {
+  transform: rotate(10deg);
+}
+.circle .dot:nth-child(2)::after, .circle .dot:nth-child(2)::before {
+  animation-delay: -0.25s;
+}
+.circle .dot:nth-child(3) {
+  transform: rotate(20deg);
+}
+.circle .dot:nth-child(3)::after, .circle .dot:nth-child(3)::before {
+  animation-delay: -0.5s;
+}
+.circle .dot:nth-child(4) {
+  transform: rotate(30deg);
+}
+.circle .dot:nth-child(4)::after, .circle .dot:nth-child(4)::before {
+  animation-delay: -0.75s;
+}
+.circle .dot:nth-child(5) {
+  transform: rotate(40deg);
+}
+.circle .dot:nth-child(5)::after, .circle .dot:nth-child(5)::before {
+  animation-delay: -1s;
+}
+.circle .dot:nth-child(6) {
+  transform: rotate(50deg);
+}
+.circle .dot:nth-child(6)::after, .circle .dot:nth-child(6)::before {
+  animation-delay: -1.25s;
+}
+.circle .dot:nth-child(7) {
+  transform: rotate(60deg);
+}
+.circle .dot:nth-child(7)::after, .circle .dot:nth-child(7)::before {
+  animation-delay: -1.5s;
+}
+.circle .dot:nth-child(8) {
+  transform: rotate(70deg);
+}
+.circle .dot:nth-child(8)::after, .circle .dot:nth-child(8)::before {
+  animation-delay: -1.75s;
+}
+.circle .dot:nth-child(9) {
+  transform: rotate(80deg);
+}
+.circle .dot:nth-child(9)::after, .circle .dot:nth-child(9)::before {
+  animation-delay: -2s;
+}
+.circle .dot:nth-child(10) {
+  transform: rotate(90deg);
+}
+.circle .dot:nth-child(10)::after, .circle .dot:nth-child(10)::before {
+  animation-delay: -2.25s;
+}
+.circle .dot:nth-child(11) {
+  transform: rotate(100deg);
+}
+.circle .dot:nth-child(11)::after, .circle .dot:nth-child(11)::before {
+  animation-delay: -2.5s;
+}
+.circle .dot:nth-child(12) {
+  transform: rotate(110deg);
+}
+.circle .dot:nth-child(12)::after, .circle .dot:nth-child(12)::before {
+  animation-delay: -2.75s;
+}
+.circle .dot:nth-child(13) {
+  transform: rotate(120deg);
+}
+.circle .dot:nth-child(13)::after, .circle .dot:nth-child(13)::before {
+  animation-delay: -3s;
+}
+.circle .dot:nth-child(14) {
+  transform: rotate(130deg);
+}
+.circle .dot:nth-child(14)::after, .circle .dot:nth-child(14)::before {
+  animation-delay: -3.25s;
+}
+.circle .dot:nth-child(15) {
+  transform: rotate(140deg);
+}
+.circle .dot:nth-child(15)::after, .circle .dot:nth-child(15)::before {
+  animation-delay: -3.5s;
+}
+.circle .dot:nth-child(16) {
+  transform: rotate(150deg);
+}
+.circle .dot:nth-child(16)::after, .circle .dot:nth-child(16)::before {
+  animation-delay: -3.75s;
+}
+.circle .dot:nth-child(17) {
+  transform: rotate(160deg);
+}
+.circle .dot:nth-child(17)::after, .circle .dot:nth-child(17)::before {
+  animation-delay: -4s;
+}
+.circle .dot:nth-child(18) {
+  transform: rotate(170deg);
+}
+.circle .dot:nth-child(18)::after, .circle .dot:nth-child(18)::before {
+  animation-delay: -4.25s;
+}
+.circle .dot:nth-child(19) {
+  transform: rotate(180deg);
+}
+.circle .dot:nth-child(19)::after, .circle .dot:nth-child(19)::before {
+  animation-delay: -4.5s;
+}
+.circle .dot:nth-child(20) {
+  transform: rotate(190deg);
+}
+.circle .dot:nth-child(20)::after, .circle .dot:nth-child(20)::before {
+  animation-delay: -4.75s;
+}
+.circle .dot:nth-child(21) {
+  transform: rotate(200deg);
+}
+.circle .dot:nth-child(21)::after, .circle .dot:nth-child(21)::before {
+  animation-delay: -5s;
+}
+.circle .dot:nth-child(22) {
+  transform: rotate(210deg);
+}
+.circle .dot:nth-child(22)::after, .circle .dot:nth-child(22)::before {
+  animation-delay: -5.25s;
+}
+.circle .dot:nth-child(23) {
+  transform: rotate(220deg);
+}
+.circle .dot:nth-child(23)::after, .circle .dot:nth-child(23)::before {
+  animation-delay: -5.5s;
+}
+.circle .dot:nth-child(24) {
+  transform: rotate(230deg);
+}
+.circle .dot:nth-child(24)::after, .circle .dot:nth-child(24)::before {
+  animation-delay: -5.75s;
+}
+.circle .dot:nth-child(25) {
+  transform: rotate(240deg);
+}
+.circle .dot:nth-child(25)::after, .circle .dot:nth-child(25)::before {
+  animation-delay: -6s;
+}
+.circle .dot:nth-child(26) {
+  transform: rotate(250deg);
+}
+.circle .dot:nth-child(26)::after, .circle .dot:nth-child(26)::before {
+  animation-delay: -6.25s;
+}
+.circle .dot:nth-child(27) {
+  transform: rotate(260deg);
+}
+.circle .dot:nth-child(27)::after, .circle .dot:nth-child(27)::before {
+  animation-delay: -6.5s;
+}
+.circle .dot:nth-child(28) {
+  transform: rotate(270deg);
+}
+.circle .dot:nth-child(28)::after, .circle .dot:nth-child(28)::before {
+  animation-delay: -6.75s;
+}
+.circle .dot:nth-child(29) {
+  transform: rotate(280deg);
+}
+.circle .dot:nth-child(29)::after, .circle .dot:nth-child(29)::before {
+  animation-delay: -7s;
+}
+.circle .dot:nth-child(30) {
+  transform: rotate(290deg);
+}
+.circle .dot:nth-child(30)::after, .circle .dot:nth-child(30)::before {
+  animation-delay: -7.25s;
+}
+.circle .dot:nth-child(31) {
+  transform: rotate(300deg);
+}
+.circle .dot:nth-child(31)::after, .circle .dot:nth-child(31)::before {
+  animation-delay: -7.5s;
+}
+.circle .dot:nth-child(32) {
+  transform: rotate(310deg);
+}
+.circle .dot:nth-child(32)::after, .circle .dot:nth-child(32)::before {
+  animation-delay: -7.75s;
+}
+.circle .dot:nth-child(33) {
+  transform: rotate(320deg);
+}
+.circle .dot:nth-child(33)::after, .circle .dot:nth-child(33)::before {
+  animation-delay: -8s;
+}
+.circle .dot:nth-child(34) {
+  transform: rotate(330deg);
+}
+.circle .dot:nth-child(34)::after, .circle .dot:nth-child(34)::before {
+  animation-delay: -8.25s;
+}
+.circle .dot:nth-child(35) {
+  transform: rotate(340deg);
+}
+.circle .dot:nth-child(35)::after, .circle .dot:nth-child(35)::before {
+  animation-delay: -8.5s;
+}
+.circle .dot:nth-child(36) {
+  transform: rotate(350deg);
+}
+.circle .dot:nth-child(36)::after, .circle .dot:nth-child(36)::before {
+  animation-delay: -8.75s;
+}
+.circle .dot::after, .circle .dot::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.circle .dot::after {
+  background-color: black;
+  top: -100%;
+  animation: rotation-black 1.5s linear infinite;
+}
+@keyframes rotation-black {
+  25% {
+    transform: translate3d(0, 100%, 20px);
+  }
+  50% {
+    transform: translate3d(0, 200%, 0);
+  }
+  75% {
+    transform: translate3d(0, 100%, -20px);
+  }
+}
+.circle .dot::before {
+  background-color: white;
+  top: 100%;
+  animation: rotation-white 1.5s linear infinite;
+}
+@keyframes rotation-white {
+  25% {
+    transform: translate3d(0, -100%, -20px);
+  }
+  50% {
+    transform: translate3d(0, -200%, 0);
+  }
+  75% {
+    transform: translate3d(0, -100%, 20px);
+  }
+}/*# sourceMappingURL=index.css.map */

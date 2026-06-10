@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件上传</title>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/axios/0.26.0/axios.min.js"></script>
+</head>
+
+<body>
+    <input type="file" id="upload" multiple>
+    <img src="imgBase64" alt="缩略图">
+    <button onclick="submit()">上传文件</button>
+    <script>
+        const upload = document.querySelector("#upload")
+        let imgBase64
+        upload.addEventListener("change", handleFile)
+        function handleFile(e) {
+            console.log(e.target.files)
+            const myfile = e.target.files[0]
+            myfdo = myfile
+            const myblob = new Blob([myfile])
+            console.log(myblob)
+            const __silceBlob = myblob.slice(0, 5000)
+            const __silceFile = new File([__silceBlob], "test.png")
+            console.log(__silceFile)
+
+            const fr = new FileReader()
+            fr.readAsDataURL(__silceFile)
+            // fr.readAsDataURL(myfile)
+            fr.onload = () => {
+                console.log(fr.result)
+                imgBase64 = fr.result
+                const imgElement = document.querySelector("img");
+                imgElement.src = imgBase64;
+            }
+        }
+
+        let myfd
+        let myfdo
+        function submit() {
+            myfd = new FormData()
+            myfd.append("user", "zshtxwd")
+            myfd.append("test.rar", myfdo)
+            axios.post("/xx", myfd)
+            console.log("666")
+        }
+    </script>
+</body>
+
+</html>
